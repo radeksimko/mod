@@ -12,8 +12,8 @@ import (
 	"regexp"
 	"strings"
 
-	"golang.org/x/mod/module"
-	"golang.org/x/mod/sumdb/tlog"
+	"github.com/radeksimko/mod/module"
+	"github.com/radeksimko/mod/sumdb/tlog"
 )
 
 // A ServerOps provides the external operations

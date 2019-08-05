@@ -10,13 +10,13 @@ import (
 	"strings"
 	"sync"
 
-	"golang.org/x/mod/sumdb/note"
-	"golang.org/x/mod/sumdb/tlog"
+	"github.com/radeksimko/mod/sumdb/note"
+	"github.com/radeksimko/mod/sumdb/tlog"
 )
 
 // NewTestServer constructs a new TestServer
 // that will sign its tree with the given signer key
-// (see golang.org/x/mod/sumdb/note)
+// (see github.com/radeksimko/mod/sumdb/note)
 // and fetch new records as needed by calling gosum.
 func NewTestServer(signer string, gosum func(path, vers string) ([]byte, error)) *TestServer {
 	return &TestServer{signer: signer, gosum: gosum}

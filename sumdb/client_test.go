@@ -11,8 +11,8 @@ import (
 	"sync"
 	"testing"
 
-	"golang.org/x/mod/sumdb/note"
-	"golang.org/x/mod/sumdb/tlog"
+	"github.com/radeksimko/mod/sumdb/note"
+	"github.com/radeksimko/mod/sumdb/tlog"
 )
 
 const (

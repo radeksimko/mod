@@ -102,7 +102,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"golang.org/x/mod/semver"
+	"github.com/radeksimko/mod/semver"
 )
 
 // A Version (for clients, a module.Version) is defined by a module path and version pair.

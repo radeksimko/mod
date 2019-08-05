@@ -13,9 +13,9 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"golang.org/x/mod/module"
-	"golang.org/x/mod/sumdb/note"
-	"golang.org/x/mod/sumdb/tlog"
+	"github.com/radeksimko/mod/module"
+	"github.com/radeksimko/mod/sumdb/note"
+	"github.com/radeksimko/mod/sumdb/tlog"
 )
 
 // A ClientOps provides the external operations
