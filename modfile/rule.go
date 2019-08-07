@@ -223,7 +223,8 @@ func (f *File) add(errs *bytes.Buffer, line *Line, verb string, args []string, f
 			fmt.Fprintf(errs, "%s:%d: %v\n", f.Syntax.Name, line.Start.Line, err)
 			return
 		}
-		if err := module.MatchPathMajor(v, pathMajor); err != nil {
+		if !module.MatchPathMajor(v, pathMajor) {
+			err := fmt.Errorf("Path %q doesn't match", pathMajor)
 			fmt.Fprintf(errs, "%s:%d: %v\n", f.Syntax.Name, line.Start.Line, &Error{Verb: verb, ModPath: s, Err: err})
 			return
 		}
@@ -265,7 +266,8 @@ func (f *File) add(errs *bytes.Buffer, line *Line, verb string, args []string, f
 				fmt.Fprintf(errs, "%s:%d: %v\n", f.Syntax.Name, line.Start.Line, err)
 				return
 			}
-			if err := module.MatchPathMajor(v, pathMajor); err != nil {
+			if !module.MatchPathMajor(v, pathMajor) {
+				err := fmt.Errorf("Path %q doesn't match", pathMajor)
 				fmt.Fprintf(errs, "%s:%d: %v\n", f.Syntax.Name, line.Start.Line, &Error{Verb: verb, ModPath: s, Err: err})
 				return
 			}
