@@ -2,6 +2,12 @@ This fork is just a quick and dirty solution (commit log should be self-explanat
 to provide what https://github.com/golang/go/issues/31761 aims to provide
 when it is done (currently scheduled for Go 1.14; Feb 2020).
 
+**NOTE**
+
+APIs exposed from this module (esp. from modfile package) are
+subject to change and everyone is encouraged to migrate
+to `golang.org/x/mod` when it's feature complete and stable.
+
 ----
 
 This repository holds packages for writing tools
